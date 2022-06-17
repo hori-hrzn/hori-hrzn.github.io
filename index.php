@@ -10,6 +10,8 @@
     <div>
         <p>Hi!</p>
     </div>
-    
+    <?php
+    echo "Hola en PHP";
+    ?>
 </body>
 </html>
