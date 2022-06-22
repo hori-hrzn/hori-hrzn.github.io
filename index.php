@@ -8,10 +8,7 @@
 </head>
 <body>
     <div>
-        <p>Hi!</p>
+        <p>Hi! This is the beggining of hori's webpage.</p>
     </div>
-    <?php
-    echo "Hola en PHP";
-    ?>
 </body>
 </html>
