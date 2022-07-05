@@ -112,3 +112,21 @@ a:hover {
         top: 0px;
     }
 }
+
+@keyframes show-lang-menu {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes hide-lang-menu {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
