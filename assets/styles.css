@@ -1,23 +1,6 @@
 /* Importing Montserrat font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-@media screen and (max-width: 480px) {
-    /* CSS for mobile phones */
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cards :first-child {
-        margin-top: auto;
-    }
-
-    .cards article {
-        margin-top: 20px;
-    }
-}
-
 
 body {
     margin: 0;
@@ -58,15 +41,35 @@ a:hover {
     width: 40%;
     margin-left: auto;
     margin-top: auto;
+    margin-bottom: 2px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
+
+
 .langs_content {
     display: none;
     position: absolute;
     margin-left: 20px;
+}
+
+.menu_responsive {
+    display: none;
+    margin-top: 28px;
+}
+
+.lateral_menu {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: aqua;
+    height: 100vh;
+    width: 50%;
+    margin-left: -35%;
+    border: 1px solid black;
+
 }
 
 .whitespace {
@@ -113,20 +116,81 @@ a:hover {
     }
 }
 
-@keyframes show-lang-menu {
+@keyframes show-menu {
     from {
         opacity: 0%;
     }
+
     to {
         opacity: 100%;
     }
 }
 
-@keyframes hide-lang-menu {
+@keyframes hide-menu {
     from {
         opacity: 100%;
     }
+
     to {
         opacity: 0%;
     }
+}
+
+@keyframes show-lateral-menu {
+    from {
+        right: -50px;
+        opacity: 0%;
+    }
+    to {
+        right: 0px;
+        opacity: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* A little bit bigger than mobile phone screens */
+
+    .button-list {
+        display: none;
+    }
+
+    .menu_responsive {
+        display: inline-block;
+        margin-left: 35%;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+
+    .title img {
+        height: 20px;
+        margin-left: 10px;
+        margin-top: 31px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards :first-child {
+        margin-top: auto;
+    }
+
+    .cards article {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    /* CSS for mobile phones */
+
+
+
+
+
+
+
 }
