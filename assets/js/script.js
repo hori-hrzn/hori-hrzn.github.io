@@ -34,6 +34,21 @@ langs_img.addEventListener("click", function () {
 
 })
 
+// MOBILE LANG MENU OPEN
+
+let mobile_langs_img = document.getElementById("mobile_langs_img")
+let mobile_lang_menu = "closed"
+
+mobile_langs_img.addEventListener("click", function () {
+    let mobile_langs_content = document.getElementsByClassName("mobile_langs_content")[0]
+    mobile_langs_content.style.display = "inline-block"
+    mobile_langs_content.style.animation = "show-menu 0.5s forwards"
+    setTimeout(() => {
+        mobile_lang_menu = "open"
+    }, 500)
+
+})
+
 // OPEN LATERAL MENU (mobile only)
 
 let lateral_menu_button = document.getElementById("lateral_menu_button")
@@ -51,6 +66,8 @@ lateral_menu_button.addEventListener("click", () => {
     scroll_lock = true
 
 })
+
+
 
 // CLOSE MENU WHEN CLICKED OUTSIDE
 // REMEMBER; SET TIMOUT TIMERS HAVE TO BE THE >= THE ANIMATION TIMER
@@ -72,6 +89,26 @@ window.addEventListener("click", (event) => {
         setTimeout(() => {
             langs_content.style.display = "none"
             lang_menu = "closed"
+        }, 500)
+    }
+
+    // MOBILE LANG MENU CLOSING EVENTS
+
+    if (event.target.parentElement.matches("#mobile_langs_img") && mobile_lang_menu == "open") {
+        mobile_langs_content = document.getElementsByClassName("mobile_langs_content")[0]
+        mobile_langs_content.style.animation = "hide-menu 0.5s forwards"
+        setTimeout(() => {
+            mobile_langs_content.style.display = "none"
+            mobile_lang_menu = "closed"
+        }, 500)
+    }
+
+    if (!event.target.parentElement.matches(".mobile_langs_content") && !event.target.parentElement.matches("#mobile_langs_img")) {
+        mobile_langs_content = document.getElementsByClassName("mobile_langs_content")[0]
+        mobile_langs_content.style.animation = "hide-menu 0.5s forwards"
+        setTimeout(() => {
+            mobile_langs_content.style.display = "none"
+            mobile_lang_menu = "closed"
         }, 500)
     }
 
