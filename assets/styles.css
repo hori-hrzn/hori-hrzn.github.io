@@ -53,7 +53,7 @@ a:hover {
 .langs_content {
     display: none;
     position: absolute;
-    margin-left: 20px;
+    margin-left: -2%;
 }
 
 .mobile_lang_menu {
@@ -84,10 +84,11 @@ a:hover {
     display: none;
     position: fixed;
     z-index: 1;
-    background-color: aqua;
+    background-color: white;
     height: 100vh;
     width: 50%;
     margin-left: -35%;
+    margin-top: 3px;
     border: 1px solid black;
 
 }
@@ -95,6 +96,12 @@ a:hover {
 .lateral_button_list {
     display: flex;
     flex-direction: column;
+}
+
+.lateral_button_list a {
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration: underline;
 }
 
 .whitespace {
